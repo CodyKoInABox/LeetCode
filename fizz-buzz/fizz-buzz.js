@@ -14,7 +14,7 @@ let fizzBuzz = function(n) {
         if(i%5==0){
             string += 'Buzz'
         }
-        else if(i%3!=0 && i%5!=0){
+        if(string == ""){
             string += i
         }
 
