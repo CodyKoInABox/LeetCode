@@ -5,18 +5,20 @@
  */
 let findSmallestSetOfVertices = function(n, edges) {
 
-    let nodes = []
+    let output = []
 
-    for(let i = 0; i<n; i++){
-        nodes.push(i)
-    }
-    
-    edges.forEach(element => {
-        if( nodes.includes(element[1]) ){
-            let index = nodes.indexOf(element[1])
-            nodes.splice(index, 1)
+    let array = new Array(n).fill(0)
+
+    edges.forEach((edge) =>{
+        array[edge[1]]++
+    })
+
+    array.forEach((item, index) => {
+        if(item == 0){
+            output.push(index)
         }
     })
 
-    return nodes
+
+    return output
 };
