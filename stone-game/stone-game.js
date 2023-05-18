@@ -7,6 +7,7 @@ let stoneGame = function(piles) {
     let bob = 0;
 
     let turn = true;
+    
     for(let i = 0; i < piles.length; i++){
         if(piles[i] >= piles[piles.length-(i+1)]){
             if(turn){
