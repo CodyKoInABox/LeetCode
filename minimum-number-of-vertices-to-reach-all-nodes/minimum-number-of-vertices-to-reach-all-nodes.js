@@ -3,18 +3,20 @@
  * @param {number[][]} edges
  * @return {number[]}
  */
+let findSmallestSetOfVertices = function(n, edges) {
 
- //THIS CODE IS NOT MINE, THIS IS JUST A RUNTIME TEST!
-var findSmallestSetOfVertices = function(n, edges) {
-    let indegrees = new Array(n).fill(0);
-    for (const edge of edges){
-        indegrees[edge[1]]++;
+    let nodes = []
+
+    for(let i = 0; i<n; i++){
+        nodes.push(i)
     }
-    let ans = [];
-    for (let i = 0; i< n; i++){
-        if (indegrees[i] == 0){
-            ans.push(i)
+    
+    edges.forEach(element => {
+        if( nodes.includes(element[1]) ){
+            let index = nodes.indexOf(element[1])
+            nodes.splice(index, 1)
         }
-    }
-    return ans;
+    })
+
+    return nodes
 };
