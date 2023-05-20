@@ -1,4 +1,4 @@
 # Write your MySQL query statement below
 
-SELECT DISTINCT product_name, year, price FROM Sales INNER JOIN Product
+SELECT product_name, year, price FROM Sales INNER JOIN Product
 ON Sales.product_id = Product.product_id;
