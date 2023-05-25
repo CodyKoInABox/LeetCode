@@ -7,5 +7,5 @@ function mergeAlternately(word1: string, word2: string): string {
 	    if(word2[i]) output += word2[i];
     }
 
-    return output;
+    return output; 
 };
