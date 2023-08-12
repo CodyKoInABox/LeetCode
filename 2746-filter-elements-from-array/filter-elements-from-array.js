@@ -11,7 +11,7 @@ var filter = function(arr, fn) {
         if(fn(arr[i], i)){
             filteredArray.push(arr[i])
         }
-    }
-    
+    } 
+
     return filteredArray
 };
