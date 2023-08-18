@@ -5,14 +5,14 @@ int* getConcatenation(int* nums, int numsSize, int* returnSize){
 
     *returnSize = 2 * numsSize;
 
-    int *answer;
+    int *ans;
 
-    answer = (int*) malloc(*returnSize * sizeof(int));
+    ans = (int*) malloc(*returnSize * sizeof(int));
 
     for(int i = 0; i < numsSize; i++){
-        answer[i] = nums[i];
-        answer[i + numsSize] = nums[i];
+        ans[i] = nums[i];
+        ans[i + numsSize] = nums[i];
     }
 
-    return answer;
+    return ans;
 }
