@@ -4,6 +4,7 @@
  * @return {string}
  */
 var mergeAlternately = function(word1, word2) {
+    
     let largestLenght = Math.max(word1.length, word2.length)
     let output = ''
 
