@@ -5,7 +5,7 @@ int* buildArray(int* nums, int numsSize, int* returnSize){
 
     *returnSize = numsSize;
 
-    int *ans;
+    int *ans; 
 
     ans = (int*) malloc(*returnSize * sizeof(int));
 
